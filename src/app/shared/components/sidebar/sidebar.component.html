@@ -9,4 +9,10 @@
     </button>
 
   </div>
+  <h5 class="text-light">Historial de Busqueda</h5>
+  <div class="list-group">
+    <button *ngFor="let etiqueta of historial" class="list-group-item list-group-item-action">
+      {{etiqueta}}
+    </button>
+  </div>
 </div>
