@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,6 +7,13 @@ import { Injectable } from '@angular/core';
 export class GifsService {
   // Creamos el atributo que va a guardar el historial de etiquetas
   private _historialEtiquetas: string[] = [];
+  // el codigo de la api de gifs de giphy
+  private apiKey:string='lkYPzpFpWFU7nPsLD2jcrbeLP5fenx4C';
+
+  // Inyectamos HttpClient
+  constructor(private http: HttpClient) {
+
+   }
 
   // El getter del historial
   get historialEtiquetas() {
@@ -36,5 +44,4 @@ export class GifsService {
     }
   }
 
-  constructor() { }
 }
