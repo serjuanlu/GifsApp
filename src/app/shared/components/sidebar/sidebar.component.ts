@@ -13,5 +13,8 @@ export class SidebarComponent {
   get historial(){
     return this.gifsService.historialEtiquetas;
   }
-
+// Método para buscar GIFs usando una etiqueta del historial
+buscarEtiqueta(etiqueta: string): void {
+  this.gifsService.buscarEtiqueta(etiqueta);
+}
 }

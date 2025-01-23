@@ -11,7 +11,10 @@
   </div>
   <h5 class="text-light">Historial de Busqueda</h5>
   <div class="list-group">
-    <button *ngFor="let etiqueta of historial" class="list-group-item list-group-item-action">
+    <button *ngFor="let etiqueta of historial" class="list-group-item list-group-item-action"
+
+    (click)="buscarEtiqueta(etiqueta)">
+    <!-- ARRIBA ESTA LO NECESARIO PARA BUSCAR LA ETIQUETA -->
       {{etiqueta}}
     </button>
   </div>
